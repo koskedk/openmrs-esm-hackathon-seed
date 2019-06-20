@@ -59,6 +59,12 @@ class Root extends React.Component<any, any> {
     });
   };
 
+  getIcon = () => {
+    return this.state.editLabel === "edit address"
+      ? "fa fa-pen"
+      : "fa fa-times";
+  };
+
   render() {
     return this.state.patient ? (
       <div className="card">
@@ -67,7 +73,7 @@ class Root extends React.Component<any, any> {
         </div>
         <div className="card-body">
           <button className="filled" onClick={this.showForm}>
-            <i className="fa fa-pen"></i>
+            <i className={this.getIcon()}></i>
           </button>
           <Address
             onSaved={this.loadPatient}
