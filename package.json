@@ -4,6 +4,7 @@
   "description": "A starter repo for creating an openmrs microfrontend",
   "scripts": {
     "start": "webpack-dev-server",
+    "micro": "npm start -- --https --no-inline --port 8082",
     "lint": "eslint src --ext tsx",
     "build": "webpack --mode=production",
     "typescript": "tsc",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/joeldenning/openmrs-esm-hackathon-seed#readme",
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-async-to-generator": "^7.4.4",
+    "@babel/plugin-transform-block-scoped-functions": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
@@ -34,6 +37,9 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -55,8 +61,11 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@testing-library/react": "^8.0.1",
+    "@types/axios": "^0.14.0",
     "@types/react": "^16.8.19",
     "@types/react-dom": "^16.8.4",
+    "@types/systemjs": "^0.20.6",
+    "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",

@@ -3,6 +3,8 @@
     "@babel/preset-env",
     "@babel/preset-react",
     "@babel/preset-typescript",
-    "@emotion/babel-preset-css-prop",
+    "@emotion/babel-preset-css-prop"
   ],
+  "plugins": ["transform-class-properties","@babel/plugin-transform-block-scoped-functions","syntax-async-functions",
+    "@babel/plugin-transform-async-to-generator"]
 }
